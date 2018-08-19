@@ -5,9 +5,9 @@ services:
     volumes:
       - .:/app
     working_dir: /app
-    command: bundle exec rails s -p 8080 -b '0.0.0.0'
+    command: bundle exec puma -t 5:5 -p 3000 -e development
     ports:
-      - "8080:8080"
+      - "8080:3000"
     depends_on:
       - database
 
