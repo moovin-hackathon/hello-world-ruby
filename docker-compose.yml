@@ -8,3 +8,10 @@ services:
     command: bundle exec rails s -p 8080 -b '0.0.0.0'
     ports:
       - "8080:8080"
+    depends_on:
+      - database
+
+  database:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
