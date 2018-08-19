@@ -1,0 +1,12 @@
+language: ruby
+dist: trusty
+rvm:
+- 2.4.1
+script:
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: d6x5ZsuLGB21lyspqvgP6Ei1hmGKoxuvMgiWZ8aoR+wNrAzMTt4tPAsm4sRmuqIR9Fmsg1eGOl++evWRWkOc82btIqP5Ooobbkkh02ft3U6JAB9FmEbIQwZNklM4SXqG8t/8VLut1TUUvWzzV9bxS2pKq2/RiQGHlwCmbts68wO2k6PI1kwINAVz5Ps5Dm+nindVxta6wnaLZ6Ww2lbDSxw98xf4XAI/gwfNvHr/W1OKQczUmUxRSXtskGB/GGdrBh5qjVpyScC48hD4EVuXhmPMlFDHAFF7N/pPJSpwwS0GwsjJkzzmPqWvp+iUGiWhbEDIRETnt8nTpYG8aJ52JuS+FIHZeUu7KjqEbIDK2juPwmDLUXmFnDSjWu4rLX+l1NF9p4K2R7Sq55hNro+7vzNcSqPFeM+TaOQeljM0Q5saVbVPjTX8vTi02K4HmBhgEumkOn61dlnR40Fh96ENyTUAtxeU9c6khS1A1tspFewd/Mp5DQhgjtPGHAumtqIGW20kozK2D4n2UEN9OjM+1JP5r48FY/4owdykIMzfp7i7rHEvMYc3P9uKKwdXvnFi+EjbX3z9rbesTDARVQgA5sh938v2tGV/RZYoW7/d2PxOdoF+/Ni3xNwjoOhylON1FQd28Fb/55NLdxgIUqbosF0yB61ZYlicu+ebS5LBDmo=
+  app:
+    master: moovin-hackathon-hw-ruby
